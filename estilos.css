@@ -1,0 +1,296 @@
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.7em;
+  color: #666;
+}
+
+#contenido {
+  width: 60em;
+  margin: 0 auto 3em auto;
+  text-align: left;
+}
+
+.t1 {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #757575;
+  clear: both;
+  text-align: right;
+}
+
+.t2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: #7A7A00;
+  padding: 0.3em;
+}
+
+.t3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #7A7A00;
+}
+
+/************************************************
+*                  CABECERA                    *
+************************************************/
+
+#logo {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 1em 2em;
+  font-size: 1em;
+}
+
+#mis {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  color: #c00;
+}
+
+#libros {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  color: #000;
+}
+
+#pasos {
+  text-align: center;
+}
+
+#pasos strong {
+  font-size: 1.2em;
+  margin-right: 5px;
+  font-variant: small-caps;
+  vertical-align: middle;
+}
+
+#pasos img {
+  border: 0;
+  vertical-align: middle;
+}
+
+#imprimir {
+  float: left;
+}
+
+#imprimir img {
+  border: 0;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+#ayuda {
+  float: right;
+  margin-bottom: 6px;
+}
+
+#ayuda img {
+  border: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/************************************************
+*            Cesta de la compra                *
+************************************************/
+
+#articulos {
+  clear: both;
+}
+
+#tabla_compra {
+  display: grid;
+  gap: 0;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+#conceptos {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1.5fr 1fr;
+}
+
+#conceptos > div {
+  background-color: #eee;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  font-weight: bold;
+  color: #666;
+}
+
+#conceptos > div:last-child {
+  border-right: none;
+}
+
+.fila_producto {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1.5fr 1fr;
+}
+
+.fila_producto > div {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.fila_producto > div:last-child {
+  border-right: none;
+}
+
+.celda_producto img {
+  width: 80px;
+  height: auto;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.celda_producto p {
+  margin: 0 0 5px 0;
+}
+
+.celda_centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#total {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1.5fr 1fr;
+}
+
+.total_label {
+  grid-column: 1 / span 3;
+  text-align: right;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.total_value {
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+
+#info_en {
+  font-size: 1em;
+  text-align: right;
+}
+
+/************************************************
+*       Datos de facturación (formulario)      *
+************************************************/
+
+.info {
+  color: #000;
+  background-color: #EEF6FF;
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  margin: 0em 0.5em 0em 0.5em;
+}
+
+.i {
+  color: #fff;
+  background-color: #c00;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.1em 0.6em;
+  margin-right: 0.6em;
+}
+
+.obligatorio {
+  color: #b00;
+}
+
+/* Tu formulario está montado con una tabla #tabladatos */
+#tabladatos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+/* Encabezados "Datos personales / Datos de envío" */
+#tabladatos tr:first-child td p strong {
+  font-size: 1.1em;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  display: block;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+/* Contenedor de cada campo: .campo_form */
+.campo_form {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.campo_form label {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.campo_form input,
+.campo_form select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* Parte de promociones (los checkboxes en columnas flotadas) */
+#lista_promociones {
+  margin-top: 1em;
+}
+
+.grupo_check {
+  float: left;
+  margin-right: 5em;
+}
+
+#div_captcha {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#div_captcha img,
+#div_captcha input {
+  vertical-align: middle;
+}
+
+#submit {
+  text-align: right;
+}
+
+/************************************************
+*          Garantías y pie de página           *
+************************************************/
+
+#garantias {
+  text-align: left;
+}
+
+.lista {
+  padding-left: 2em;
+}
+
+#pie {
+  border-top: 3px solid #ccc;
+  padding: 1em;
+  text-align: center;
+}
